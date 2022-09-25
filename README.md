@@ -1,5 +1,6 @@
 # epn-markdown-editor
 >此版本时在imzbf/md-editor-rt项目的基础上修改了一部分内容
+>
 >源GIT仓库地址：https://github.com/imzbf/md-editor-rt
 
 ![](https://img.shields.io/github/package-json/v/imzbf/epn-markdown-editor) ![](https://img.shields.io/npm/dm/epn-markdown-editor) ![](https://img.shields.io/bundlephobia/min/epn-markdown-editor) ![](https://img.shields.io/github/license/imzbf/epn-markdown-editor) ![](https://img.shields.io/badge/ssr-%3E1.0.0-brightgreen)
