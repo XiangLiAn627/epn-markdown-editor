@@ -1,13 +1,14 @@
 # epn-markdown-editor
-此版本时在imzbf/md-editor-rt项目的基础上修改了一部分内容
+>此版本时在imzbf/md-editor-rt项目的基础上修改了一部分内容
 源GIT仓库地址：https://github.com/imzbf/md-editor-rt
+
 ![](https://img.shields.io/github/package-json/v/imzbf/epn-markdown-editor) ![](https://img.shields.io/npm/dm/epn-markdown-editor) ![](https://img.shields.io/bundlephobia/min/epn-markdown-editor) ![](https://img.shields.io/github/license/imzbf/epn-markdown-editor) ![](https://img.shields.io/badge/ssr-%3E1.0.0-brightgreen)
 
-English \| [中文](https://github.com/imzbf/epn-markdown-editor/blob/master/README-CN.md)
+English \| [中文](https://github.com/XiangLiAn627/epn-markdown-editor/blob/master/README-CN.md)
 
 Markdown editor for `react`, developed in `jsx` and `typescript`.
 
-- Documentation and demo：[Go](https://imzbf.github.io/epn-markdown-editor)
+- Documentation and demo：[Go](https://github.com/XiangLiAn627/epn-markdown-editor)
 
 - Use it online：[Go](https://codesandbox.io/s/elated-khorana-65jmr)
 
@@ -50,11 +51,11 @@ export default () => {
 
 | Default theme | Dark theme | Preview only |
 | --- | --- | --- |
-| ![](https://imzbf.github.io/epn-markdown-editor/imgs/preview-light.png) | ![](https://imzbf.github.io/epn-markdown-editor/imgs/preview-dark.png) | ![](https://imzbf.github.io/epn-markdown-editor/imgs/preview-previewOnly.png) |
+| ![](https://github.com/XiangLiAn627/epn-markdown-editor/imgs/preview-light.png) | ![](https://github.com/XiangLiAn627/epn-markdown-editor/imgs/preview-dark.png) | ![](https://github.com/XiangLiAn627/epn-markdown-editor/imgs/preview-previewOnly.png) |
 
 mark and emoji extensions
 
-![mark and emoji extension](https://imzbf.github.io/epn-markdown-editor/imgs/mark_emoji.gif)
+![mark and emoji extension](https://github.com/XiangLiAn627/epn-markdown-editor/imgs/mark_emoji.gif)
 
 ## Apis
 
@@ -400,7 +401,7 @@ Use `MdEditor.config(option: ConfigOption)` to reconfigure `renderer`.
 
 ## Components
 
-They are used as attributes of the editor component, eg: `Editor.DropdownToolbar`. For more examples, refer to [document](https://imzbf.github.io/epn-markdown-editor).
+They are used as attributes of the editor component, eg: `Editor.DropdownToolbar`. For more examples, refer to [document](https://github.com/XiangLiAn627/epn-markdown-editor).
 
 ### NormalToolbar
 

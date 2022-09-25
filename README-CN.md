@@ -1,13 +1,14 @@
 # epn-markdown-editor
-此版本时在imzbf/md-editor-rt项目的基础上修改了一部分内容
+>此版本时在imzbf/md-editor-rt项目的基础上修改了一部分内容
 源GIT仓库地址：https://github.com/imzbf/md-editor-rt
+
 ![](https://img.shields.io/github/package-json/v/imzbf/epn-markdown-editor) ![](https://img.shields.io/npm/dm/epn-markdown-editor) ![](https://img.shields.io/bundlephobia/min/epn-markdown-editor) ![](https://img.shields.io/github/license/imzbf/epn-markdown-editor) ![](https://img.shields.io/badge/ssr-%3E1.0.0-brightgreen)
 
-[English](https://github.com/imzbf/epn-markdown-editor) \| 中文
+[English](https://github.com/XiangLiAn627/epn-markdown-editor) \| 中文
 
 react 版本的 Markdown 编辑器，[md-editor-v3](https://imzbf.github.io/md-editor-v3)同系列项目。
 
-- 文档与在线预览：[传送门](https://imzbf.github.io/epn-markdown-editor)
+- 文档与在线预览：[传送门](https://github.com/XiangLiAn627/epn-markdown-editor)
 
 - 在线尝试示例：[传送门](https://codesandbox.io/s/elated-khorana-65jmr)
 
@@ -46,11 +47,11 @@ export default () => {
 
 | 默认模式 | 暗黑模式 | 仅预览 |
 | --- | --- | --- |
-| ![默认模式](https://imzbf.github.io/epn-markdown-editor/imgs/preview-light.png) | ![暗黑模式](https://imzbf.github.io/epn-markdown-editor/imgs/preview-dark.png) | ![](https://imzbf.github.io/epn-markdown-editor/imgs/preview-previewOnly.png) |
+| ![默认模式](https://github.com/XiangLiAn627/epn-markdown-editor/imgs/preview-light.png) | ![暗黑模式](https://github.com/XiangLiAn627/epn-markdown-editor/imgs/preview-dark.png) | ![](https://github.com/XiangLiAn627/epn-markdown-editor/imgs/preview-previewOnly.png) |
 
 简单的标记和表情扩展预览
 
-![mark and emoji extension](https://imzbf.github.io/epn-markdown-editor/imgs/mark_emoji.gif)
+![mark and emoji extension](https://github.com/XiangLiAn627/epn-markdown-editor/imgs/mark_emoji.gif)
 
 ## Apis
 
@@ -409,7 +410,7 @@ export interface StaticTextDefaultValue {
 
 ## 内部组件
 
-扩展组件作为编辑器组件的属性值来使用，例如：`Editor.DropdownToolbar`。使用参考：[文档页面](https://imzbf.github.io/epn-markdown-editor)
+扩展组件作为编辑器组件的属性值来使用，例如：`Editor.DropdownToolbar`。使用参考：[文档页面](https://github.com/XiangLiAn627/epn-markdown-editor)
 
 ### 普通扩展工具栏
 
