@@ -148,6 +148,9 @@ const Editor = (props: EditorProp) => {
           value={modelValue}
           onChange={wrapOnChange}
           setting={setting}
+          theme={theme}
+          catalogShow={catalogShow}
+          catalogStyle={catalogStyle}
           onHtmlChanged={onHtmlChanged}
           onGetCatalog={onGetCatalog}
           sanitize={sanitize}
@@ -166,7 +169,7 @@ const Editor = (props: EditorProp) => {
             onScrollAutoChange={onScrollAutoChange}
           />
         )}
-        {catalogShow && (
+        {/* {catalogShow && (
           <MdCatalog
             theme={theme}
             style={catalogStyle}
@@ -174,7 +177,7 @@ const Editor = (props: EditorProp) => {
             editorId={editorId}
             markedHeadingId={markedHeadingId}
           />
-        )}
+        )} */}
       </div>
     </EditorContext.Provider>
   );

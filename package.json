@@ -1,6 +1,6 @@
 {
-  "name": "md-editor-rt",
-  "version": "2.2.1",
+  "name": "epn-markdown-editor",
+  "version": "1.0.1",
   "keywords": [
     "react",
     "nextjs",
@@ -16,26 +16,26 @@
   ],
   "description": "Markdown editor for react, developed by jsx and typescript, dark theme、beautify content by prettier、render articles directly、paste or clip the picture and upload it...",
   "author": {
-    "name": "zbf",
-    "url": "https://imzbf.cc"
+    "name": "XiangLiAn627",
+    "url": "https://github.com/XiangLiAn627"
   },
-  "homepage": "https://imzbf.github.io/md-editor-rt/",
+  "homepage": "https://github.com/XiangLiAn627/epn-markdown-editor/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/imzbf/md-editor-rt.git"
+    "url": "git+https://github.com/XiangLiAn627/epn-markdown-editor/epn-markdown-editor.git"
   },
   "bugs": {
-    "url": "https://github.com/imzbf/md-editor-rt/issues"
+    "url": "https://github.com/XiangLiAn627/epn-markdown-editor/issues"
   },
   "files": [
     "lib"
   ],
   "type": "module",
   "types": "./lib/MdEditor/Editor.d.ts",
-  "module": "./lib/md-editor-rt.es.js",
+  "module": "./lib/epn-markdown-editor.es.js",
   "exports": {
     ".": {
-      "import": "./lib/md-editor-rt.es.js"
+      "import": "./lib/epn-markdown-editor.es.js"
     },
     "./lib/style.css": "./lib/style.css"
   },

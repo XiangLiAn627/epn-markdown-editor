@@ -485,7 +485,7 @@ export const useCatalog = (props: EditorProp) => {
 
   const catalogStyle = useMemo<CSSProperties>(() => {
     return {
-      display: catalogVisible ? 'block' : 'none'
+      display: catalogVisible ? 'inline-block' : 'none'
     };
   }, [catalogVisible]);
 

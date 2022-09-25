@@ -1124,9 +1124,9 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-md-editor-rt@^2.0.0-beta.0:
+epn-markdown-editor@^2.0.0-beta.0:
   version "2.0.0-beta.0"
-  resolved "https://registry.npmjs.org/md-editor-rt/-/md-editor-rt-2.0.0-beta.0.tgz#b9f826fdaf6fea6450701f0b57b24745d02c7dbd"
+  resolved "https://registry.npmjs.org/epn-markdown-editor/-/epn-markdown-editor-2.0.0-beta.0.tgz#b9f826fdaf6fea6450701f0b57b24745d02c7dbd"
   integrity sha512-M5QUuCByin9xoCriFmSkUFEnxSkPAcmc1XaezNXxtfGxrOZ9NXsg17JGTmLeePBz71hOZ4lg5EpxLoFoQiaikg==
   dependencies:
     "@types/marked" "^4.0.3"

@@ -22,7 +22,7 @@ export default (): Plugin => {
           form.parse(req, (err, fields, files) => {
             const filename = files.file[0].path
               .replace(/\\/g, '/')
-              .split('md-editor-rt/dev/public')[1];
+              .split('epn-markdown-editor/dev/public')[1];
 
             res.end(
               JSON.stringify({

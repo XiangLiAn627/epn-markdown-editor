@@ -701,7 +701,7 @@ const Toolbar = (props: ToolbarProp) => {
               <div
                 className={`${prefix}-toolbar-item`}
                 title={ult.toolbarTips?.github}
-                onClick={() => goto('https://github.com/imzbf/md-editor-rt')}
+                onClick={() => goto('https://github.com/imzbf/epn-markdown-editor')}
                 key="bar-github"
               >
                 <svg className={`${prefix}-icon`} aria-hidden="true">

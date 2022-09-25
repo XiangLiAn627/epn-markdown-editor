@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import MdEditor from '../../MdEditor/Editor';
-// import Editor from '../../lib/md-editor-rt.es';
+// import Editor from '../../lib/epn-markdown-editor.es';
 import mdText from '../data.md';
 import { Theme } from '../App';
 // import '../../lib/style.css';

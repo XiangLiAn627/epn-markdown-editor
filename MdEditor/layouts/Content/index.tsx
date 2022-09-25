@@ -1,7 +1,7 @@
 import React, { useContext, useRef } from 'react';
 import { prefix } from '../../config';
 import { EditorContext } from '../../Editor';
-import { SettingType, HeadList, MarkedHeadingId } from '../../type';
+import { SettingType, HeadList, MarkedHeadingId, Themes } from '../../type';
 import {
   useAutoGenrator,
   useHistory,
@@ -12,11 +12,13 @@ import {
 } from './hooks';
 import { classnames } from '../../utils';
 import bus from '../../utils/event-bus';
+import MdCatalog from '../../extensions/MdCatalog';
 
 export type EditorContentProp = Readonly<{
   value: string;
   onChange: (v: string) => void;
   setting: SettingType;
+  theme: Themes
   onHtmlChanged?: (h: string) => void;
   onGetCatalog?: (list: HeadList[]) => void;
   // 不使用该功能
@@ -26,6 +28,8 @@ export type EditorContentProp = Readonly<{
   noKatex?: boolean;
   markedHeadingId: MarkedHeadingId;
   scrollAuto: boolean;
+  catalogShow: boolean;
+  catalogStyle: any;
 }>;
 
 const Content = (props: EditorContentProp) => {
@@ -107,6 +111,15 @@ const Content = (props: EditorContentProp) => {
           >
             <div className={`${prefix}-html`}>{html}</div>
           </div>
+        )}
+        {props.catalogShow && (
+          <MdCatalog
+            theme={props.theme}
+            style={props.catalogStyle}
+            className={`${prefix}-catalog-editor`}
+            editorId={editorId}
+            markedHeadingId={props.markedHeadingId}
+          />
         )}
       </div>
     </>

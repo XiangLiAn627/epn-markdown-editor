@@ -1,12 +1,13 @@
-# md-editor-rt
+# epn-markdown-editor
+此版本时在imzbf/md-editor-rt项目的基础上修改了一部分内容
+源GIT仓库地址：https://github.com/imzbf/md-editor-rt
+![](https://img.shields.io/github/package-json/v/imzbf/epn-markdown-editor) ![](https://img.shields.io/npm/dm/epn-markdown-editor) ![](https://img.shields.io/bundlephobia/min/epn-markdown-editor) ![](https://img.shields.io/github/license/imzbf/epn-markdown-editor) ![](https://img.shields.io/badge/ssr-%3E1.0.0-brightgreen)
 
-![](https://img.shields.io/github/package-json/v/imzbf/md-editor-rt) ![](https://img.shields.io/npm/dm/md-editor-rt) ![](https://img.shields.io/bundlephobia/min/md-editor-rt) ![](https://img.shields.io/github/license/imzbf/md-editor-rt) ![](https://img.shields.io/badge/ssr-%3E1.0.0-brightgreen)
-
-English \| [中文](https://github.com/imzbf/md-editor-rt/blob/master/README-CN.md)
+English \| [中文](https://github.com/imzbf/epn-markdown-editor/blob/master/README-CN.md)
 
 Markdown editor for `react`, developed in `jsx` and `typescript`.
 
-- Documentation and demo：[Go](https://imzbf.github.io/md-editor-rt)
+- Documentation and demo：[Go](https://imzbf.github.io/epn-markdown-editor)
 
 - Use it online：[Go](https://codesandbox.io/s/elated-khorana-65jmr)
 
@@ -28,15 +29,15 @@ Markdown editor for `react`, developed in `jsx` and `typescript`.
 ## Install
 
 ```shell
-yarn add md-editor-rt
+yarn add epn-markdown-editor
 ```
 
 ## Usage
 
 ```js
 import React, { useState } from 'react';
-import MdEditor from 'md-editor-rt';
-import 'md-editor-rt/lib/style.css';
+import MdEditor from 'epn-markdown-editor';
+import 'epn-markdown-editor/lib/style.css';
 
 export default () => {
   const [text, setText] = useState('# Hello Editor');
@@ -49,11 +50,11 @@ export default () => {
 
 | Default theme | Dark theme | Preview only |
 | --- | --- | --- |
-| ![](https://imzbf.github.io/md-editor-rt/imgs/preview-light.png) | ![](https://imzbf.github.io/md-editor-rt/imgs/preview-dark.png) | ![](https://imzbf.github.io/md-editor-rt/imgs/preview-previewOnly.png) |
+| ![](https://imzbf.github.io/epn-markdown-editor/imgs/preview-light.png) | ![](https://imzbf.github.io/epn-markdown-editor/imgs/preview-dark.png) | ![](https://imzbf.github.io/epn-markdown-editor/imgs/preview-previewOnly.png) |
 
 mark and emoji extensions
 
-![mark and emoji extension](https://imzbf.github.io/md-editor-rt/imgs/mark_emoji.gif)
+![mark and emoji extension](https://imzbf.github.io/epn-markdown-editor/imgs/mark_emoji.gif)
 
 ## Apis
 
@@ -73,7 +74,7 @@ mark and emoji extensions
 | toolbars | Array<ToolbarNames \| number> | [toolbars] | Show contents of toolbar, all keys<sup>see `toolbars` below</sup> |
 | toolbarsExclude | Array<ToolbarNames \| number> | [] | Don't show contents of toolbar, all keys`toolbars` |
 | noPrettier | boolean | false | Use prettier to beautify content or not |
-| editorId | string | 'md-editor-rt' | Editor id, it is used when there are more than two editors in the same page |
+| editorId | string | 'epn-markdown-editor' | Editor id, it is used when there are more than two editors in the same page |
 | tabWidth | number | 2 | One tab eq some spaces |
 | showCodeRowNumber | boolean | false | Show row number for code block or not |
 | previewTheme | 'default' \| 'github' \| 'vuepress' \| 'mk-cute' \| 'smart-blue' \| 'cyanosis' | 'default' | Preview theme, can be customized |
@@ -272,7 +273,7 @@ Use `MdEditor.config(option: ConfigOption)` to reconfigure `renderer`.
 - markedExtensions: `Array<marked.TokenizerExtension & marked.RendererExtension>`
 
   ```js
-  import MdEditor from 'md-editor-rt';
+  import MdEditor from 'epn-markdown-editor';
 
   MdEditor.config({
     markedExtensions: [your extension]
@@ -286,7 +287,7 @@ Use `MdEditor.config(option: ConfigOption)` to reconfigure `renderer`.
   Do not render `<br>` on a single line break:
 
   ```js
-  import MdEditor from 'md-editor-rt';
+  import MdEditor from 'epn-markdown-editor';
 
   MdEditor.config({
     markedOptions: { breaks: false }
@@ -298,7 +299,7 @@ Use `MdEditor.config(option: ConfigOption)` to reconfigure `renderer`.
 - editorConfig: Add more languages, reset `mermaid` template or delay rendering time:
 
   ```js
-  import MdEditor from 'md-editor-rt';
+  import MdEditor from 'epn-markdown-editor';
 
   MdEditor.config({
     editorConfig: {
@@ -316,7 +317,7 @@ Use `MdEditor.config(option: ConfigOption)` to reconfigure `renderer`.
 - editorExtensions: Config some dependency libraries, like highlight..
 
   ```js
-  import MdEditor from 'md-editor-rt';
+  import MdEditor from 'epn-markdown-editor';
 
   MdEditor.config({
     editorExtensions: { iconfont: 'https://xxx.cc' }
@@ -327,7 +328,7 @@ Use `MdEditor.config(option: ConfigOption)` to reconfigure `renderer`.
     <summary>[EditorExtensions]</summary>
 
   ```ts
-  import MdEditor from 'md-editor-rt';
+  import MdEditor from 'epn-markdown-editor';
 
   interface EditorExtensions {
     highlight?: {
@@ -386,7 +387,7 @@ Use `MdEditor.config(option: ConfigOption)` to reconfigure `renderer`.
 | CTRL + ↓ | subscript | `<sub>subscript</sub>` |
 | CTRL + Q | quote | `> quote` |
 | CTRL + O | ordered list | `1. ordered list` |
-| CTRL + L | link | `[link](https://github.com/imzbf/md-editor-rt)` |
+| CTRL + L | link | `[link](https://github.com/imzbf/epn-markdown-editor)` |
 | CTRL + Z | withdraw | Withdraw history in editor, not the function of system |
 | CTRL + SHIFT + S | line-through | `~line-through~` |
 | CTRL + SHIFT + U | unordered list | `- unordered list` |
@@ -399,7 +400,7 @@ Use `MdEditor.config(option: ConfigOption)` to reconfigure `renderer`.
 
 ## Components
 
-They are used as attributes of the editor component, eg: `Editor.DropdownToolbar`. For more examples, refer to [document](https://imzbf.github.io/md-editor-rt).
+They are used as attributes of the editor component, eg: `Editor.DropdownToolbar`. For more examples, refer to [document](https://imzbf.github.io/epn-markdown-editor).
 
 ### NormalToolbar
 
@@ -484,8 +485,8 @@ They are used as attributes of the editor component, eg: `Editor.DropdownToolbar
 
 ```js
 import React, { useState } from 'react';
-import MdEditor from 'md-editor-rt';
-import 'md-editor-rt/lib/style.css';
+import MdEditor from 'epn-markdown-editor';
+import 'epn-markdown-editor/lib/style.css';
 
 export default () => {
   const [text, setText] = useState('# Hello Editor');

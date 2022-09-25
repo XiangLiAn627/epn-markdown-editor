@@ -58,7 +58,7 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
               entry: path.resolve(__dirname, './MdEditor/Editor.tsx'),
               name: 'MdEditorRT',
               formats: ['es']
-              // fileName: (): string => 'md-editor-rt.js'
+              // fileName: (): string => 'epn-markdown-editor.js'
             },
             rollupOptions: {
               external: ['react'],

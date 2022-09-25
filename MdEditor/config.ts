@@ -9,7 +9,7 @@ import {
 
 export const prefix = 'md';
 
-export const defaultEditorId = 'md-editor-rt';
+export const defaultEditorId = 'epn-markdown-editor';
 
 // 编辑器ID
 export const iconScriptId = defaultEditorId;

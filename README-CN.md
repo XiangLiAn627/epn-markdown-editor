@@ -1,12 +1,13 @@
-# md-editor-rt
+# epn-markdown-editor
+此版本时在imzbf/md-editor-rt项目的基础上修改了一部分内容
+源GIT仓库地址：https://github.com/imzbf/md-editor-rt
+![](https://img.shields.io/github/package-json/v/imzbf/epn-markdown-editor) ![](https://img.shields.io/npm/dm/epn-markdown-editor) ![](https://img.shields.io/bundlephobia/min/epn-markdown-editor) ![](https://img.shields.io/github/license/imzbf/epn-markdown-editor) ![](https://img.shields.io/badge/ssr-%3E1.0.0-brightgreen)
 
-![](https://img.shields.io/github/package-json/v/imzbf/md-editor-rt) ![](https://img.shields.io/npm/dm/md-editor-rt) ![](https://img.shields.io/bundlephobia/min/md-editor-rt) ![](https://img.shields.io/github/license/imzbf/md-editor-rt) ![](https://img.shields.io/badge/ssr-%3E1.0.0-brightgreen)
-
-[English](https://github.com/imzbf/md-editor-rt) \| 中文
+[English](https://github.com/imzbf/epn-markdown-editor) \| 中文
 
 react 版本的 Markdown 编辑器，[md-editor-v3](https://imzbf.github.io/md-editor-v3)同系列项目。
 
-- 文档与在线预览：[传送门](https://imzbf.github.io/md-editor-rt)
+- 文档与在线预览：[传送门](https://imzbf.github.io/epn-markdown-editor)
 
 - 在线尝试示例：[传送门](https://codesandbox.io/s/elated-khorana-65jmr)
 
@@ -25,18 +26,18 @@ react 版本的 Markdown 编辑器，[md-editor-v3](https://imzbf.github.io/md-e
 ## 安装
 
 ```shell
-yarn add md-editor-rt
+yarn add epn-markdown-editor
 ```
 
 ## 用法
 
 ```js
 import React, { useState } from 'react';
-import MdEditor from 'md-editor-rt';
-import 'md-editor-rt/lib/style.css';
+import MdEditor from 'epn-markdown-editor';
+import 'epn-markdown-editor/lib/style.css';
 
 export default () => {
-  const [text, setText] = useState('hello md-editor-rt！');
+  const [text, setText] = useState('hello epn-markdown-editor！');
   return <MdEditor modelValue={text} onChange={setText} />;
 };
 ```
@@ -45,11 +46,11 @@ export default () => {
 
 | 默认模式 | 暗黑模式 | 仅预览 |
 | --- | --- | --- |
-| ![默认模式](https://imzbf.github.io/md-editor-rt/imgs/preview-light.png) | ![暗黑模式](https://imzbf.github.io/md-editor-rt/imgs/preview-dark.png) | ![](https://imzbf.github.io/md-editor-rt/imgs/preview-previewOnly.png) |
+| ![默认模式](https://imzbf.github.io/epn-markdown-editor/imgs/preview-light.png) | ![暗黑模式](https://imzbf.github.io/epn-markdown-editor/imgs/preview-dark.png) | ![](https://imzbf.github.io/epn-markdown-editor/imgs/preview-previewOnly.png) |
 
 简单的标记和表情扩展预览
 
-![mark and emoji extension](https://imzbf.github.io/md-editor-rt/imgs/mark_emoji.gif)
+![mark and emoji extension](https://imzbf.github.io/epn-markdown-editor/imgs/mark_emoji.gif)
 
 ## Apis
 
@@ -69,7 +70,7 @@ export default () => {
 | toolbars | Array<ToolbarNames \| number> | [toolbars] | 选择性展示工具栏，可选内容<sup>见下方`toolbars`</sup> |
 | toolbarsExclude | Array<ToolbarNames \| number> | [] | 选择性不展示工具栏，内容同`toolbars` |
 | noPrettier | boolean | false | 是否启用 prettier 优化 md 内容 |
-| editorId | string | 'md-editor-rt' | 编辑器唯一标识，非必须项，当相同页面存在两个编辑器时，请务必区别该属性 |
+| editorId | string | 'epn-markdown-editor' | 编辑器唯一标识，非必须项，当相同页面存在两个编辑器时，请务必区别该属性 |
 | tabWidth | number | 2 | 编辑器 TAB 键位等于空格数 |
 | showCodeRowNumber | boolean | false | 代码块是否显示行号 |
 | previewTheme | 'default' \| 'github' \| 'vuepress' \| 'mk-cute' \| 'smart-blue' \| 'cyanosis' | 'default' | 预览内容主题，自定义主题规则见下方 |
@@ -277,7 +278,7 @@ export interface StaticTextDefaultValue {
 - markedExtensions: `Array<marked.TokenizerExtension & marked.RendererExtension>`
 
   ```js
-  import MdEditor from 'md-editor-rt';
+  import MdEditor from 'epn-markdown-editor';
 
   MdEditor.config({
     markedExtensions: [your extension]
@@ -291,7 +292,7 @@ export interface StaticTextDefaultValue {
   设置输入空白行不渲染出来 🌰：
 
   ```js
-  import MdEditor from 'md-editor-rt';
+  import MdEditor from 'epn-markdown-editor';
 
   MdEditor.config({
     markedOptions: { breaks: false }
@@ -303,7 +304,7 @@ export interface StaticTextDefaultValue {
 - editorConfig: 编辑器常规配置，语言、`mermaid`默认模板和渲染延迟：
 
   ```js
-  import MdEditor from 'md-editor-rt';
+  import MdEditor from 'epn-markdown-editor';
 
   MdEditor.config({
     editorConfig: {
@@ -323,7 +324,7 @@ export interface StaticTextDefaultValue {
 - editorExtensions: 类型如下，用于配置编辑器内部的扩展
 
   ```js
-  import MdEditor from 'md-editor-rt';
+  import MdEditor from 'epn-markdown-editor';
 
   MdEditor.config({
     editorExtensions: { iconfont: 'https://xxx.cc' }
@@ -334,7 +335,7 @@ export interface StaticTextDefaultValue {
     <summary>[EditorExtensions]</summary>
 
   ```ts
-  import MdEditor from 'md-editor-rt';
+  import MdEditor from 'epn-markdown-editor';
 
   interface EditorExtensions {
     highlight?: {
@@ -408,7 +409,7 @@ export interface StaticTextDefaultValue {
 
 ## 内部组件
 
-扩展组件作为编辑器组件的属性值来使用，例如：`Editor.DropdownToolbar`。使用参考：[文档页面](https://imzbf.github.io/md-editor-rt)
+扩展组件作为编辑器组件的属性值来使用，例如：`Editor.DropdownToolbar`。使用参考：[文档页面](https://imzbf.github.io/epn-markdown-editor)
 
 ### 普通扩展工具栏
 
@@ -495,8 +496,8 @@ export interface StaticTextDefaultValue {
 
 ```js
 import React, { useState } from 'react';
-import MdEditor from 'md-editor-rt';
-import 'md-editor-rt/lib/style.css';
+import MdEditor from 'epn-markdown-editor';
+import 'epn-markdown-editor/lib/style.css';
 
 export default () => {
   const [text, setText] = useState('#Hello Editor');
