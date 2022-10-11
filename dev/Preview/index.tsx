@@ -114,6 +114,7 @@ const markedHeadingId = (_: string, __: string | number, index: number) =>
   `heading-${index}`;
 
 export default ({ theme, previewTheme, codeTheme, lang }: PreviewProp) => {
+  const [scrollElement] = useState<HTMLElement>(document.documentElement);
   const [md, setMd] = useState(() => {
     return {
       text: localStorage.getItem(SAVE_KEY) || mdText,
@@ -139,7 +140,7 @@ export default ({ theme, previewTheme, codeTheme, lang }: PreviewProp) => {
   // -----end-----
 
   const [defVisible, setDefVisible] = useState(false);
-
+  console.log(markedHeadingId);
   return (
     <div className="project-preview">
       <div
@@ -154,6 +155,8 @@ export default ({ theme, previewTheme, codeTheme, lang }: PreviewProp) => {
         <MdEditor.MdCatalog
           theme={theme}
           editorId="md-editor-preview"
+          offsetScroll={-50}
+          scrollElement={scrollElement}
           markedHeadingId={markedHeadingId}
         />
       </div>
@@ -166,6 +169,7 @@ export default ({ theme, previewTheme, codeTheme, lang }: PreviewProp) => {
           modelValue={md.text}
           markedHeadingId={markedHeadingId}
           editorId="md-editor-preview"
+          previewOnly={true}
           toolbars={[
             'bold',
             'underline',
@@ -294,7 +298,7 @@ export default ({ theme, previewTheme, codeTheme, lang }: PreviewProp) => {
           }}
         />
         <br />
-        <MdEditor
+        {/* <MdEditor
           theme={theme}
           previewTheme={previewTheme}
           codeTheme={codeTheme}
@@ -306,7 +310,7 @@ export default ({ theme, previewTheme, codeTheme, lang }: PreviewProp) => {
               text2: value
             });
           }}
-        />
+        /> */}
         <br />
         <span className="tips-text">
           tips：本页上方的编辑器有localstorage保存功能，可手动点击保存触发，每次操作后两秒会自己保存一次，可用于一些文档的编辑。下方的文档内容也是使用该编辑器完成~

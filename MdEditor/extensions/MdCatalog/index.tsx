@@ -26,6 +26,8 @@ export interface CatalogProps {
   onClick?: (e: MouseEvent, t: TocItem) => void;
   // 偏移量，默认20像素
   offsetTop?: number;
+  //锚点距离顶部多余的高度，默认0像素
+  offsetScroll?: number;
 }
 
 const MdCatalog = (props: CatalogProps) => {
@@ -190,6 +192,7 @@ const MdCatalog = (props: CatalogProps) => {
             markedHeadingId={markedHeadingId}
             tocItem={item}
             key={item.text}
+            offsetScroll={props.offsetScroll != undefined ? props.offsetScroll : 0}
             scrollElement={scrollElement}
             onClick={props.onClick}
           />

@@ -1,5 +1,5 @@
 import React, { MouseEvent } from 'react';
-import { prefix } from '../../config';
+import { defaultProps, prefix } from '../../config';
 import { TocItem } from './index';
 import { classnames } from '../../utils';
 import { MarkedHeadingId } from '../../type';
@@ -8,6 +8,7 @@ export interface CatalogLinkProps {
   tocItem: TocItem;
   markedHeadingId: MarkedHeadingId;
   scrollElement: string | HTMLElement;
+  offsetScroll?: number;
   onClick?: (e: MouseEvent, t: TocItem) => void;
 }
 
@@ -15,6 +16,7 @@ const CatalogLink = ({
   tocItem,
   markedHeadingId,
   scrollElement,
+  offsetScroll,
   onClick
 }: CatalogLinkProps) => {
   return (
@@ -36,7 +38,6 @@ const CatalogLink = ({
         if (targetHeadEle && scrollContainer) {
           let par = targetHeadEle.offsetParent as HTMLElement;
           let offsetTop = targetHeadEle.offsetTop;
-
           // 滚动容器包含父级offser标准元素
           if (scrollContainer.contains(par)) {
             while (par && scrollContainer != par) {
@@ -45,7 +46,7 @@ const CatalogLink = ({
               par = par?.offsetParent as HTMLElement;
             }
           }
-
+          offsetTop += (offsetScroll != undefined ? offsetScroll : 0);
           scrollContainer?.scrollTo({
             top: offsetTop,
             behavior: 'smooth'
@@ -61,6 +62,7 @@ const CatalogLink = ({
               markedHeadingId={markedHeadingId}
               key={item.text}
               tocItem={item}
+              offsetScroll={offsetScroll}
               scrollElement={scrollElement}
               onClick={onClick}
             />
